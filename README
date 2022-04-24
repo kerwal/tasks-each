@@ -1,6 +1,6 @@
 tasks-each
 ----------
-tasks-each is a simple function for calling one or many functions, sequentially, for one mor many items.
+tasks-each is a simple function for calling one or many functions, sequentially, for one or many items.
 currently relies on the module 'async', but not for long.
 
 installation
