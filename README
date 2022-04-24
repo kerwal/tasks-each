@@ -1,0 +1,40 @@
+tasks-each
+----------
+tasks-each is a simple function for calling one or many functions, sequentially, for one mor many items.
+currently relies on the module 'async', but not for long.
+
+installation
+------------
+npm i tasks-each
+
+usage
+-----
+const tasks_each = require("tasks-each");
+const {EventEmitter} = require("events");
+
+const items = ["Elephant", "Donkey", "Moose"];
+
+function task1(item, callback) {
+    callback("result 1");
+}
+
+function task2(item, callback) {
+    callback("result 2");
+}
+
+var emitter = new EventEmitter();
+emitter.on('task starting', (device, task) => {
+    // ...
+});
+
+emitter.on('item finished', (device, results) => {
+    // ...
+    // results expected: [["result 1", "result 2"], ["result 1", "result 2"]]
+});
+
+tasks_each([task1, task2], items, emitter)
+.then(() => {
+})
+.catch((error) => {
+
+});

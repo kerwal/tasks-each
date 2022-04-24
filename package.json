@@ -1,0 +1,14 @@
+{
+  "name": "tasks-each",
+  "version": "0.0.1",
+  "description": "tasks-each is a simple function for calling one or many functions, sequentially, for one mor many items",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Jeremy Walker (kerwal)",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.3"
+  }
+}
