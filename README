@@ -5,7 +5,7 @@ currently relies on the module 'async', but not for long.
 
 installation
 ------------
-npm i tasks-each
+npm i kerwal/tasks-each
 
 usage
 -----
@@ -16,6 +16,7 @@ const items = ["Elephant", "Donkey", "Moose"];
 
 function task1(item, callback) {
     callback("result 1");
+    // pass an Error object to callback() to cause the string of tasks for the one item to quit
 }
 
 function task2(item, callback) {
