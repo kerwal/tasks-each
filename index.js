@@ -4,8 +4,8 @@ const { EventEmitter } = require("events");
 // tasks_each(tasks, array, event_callback) - calls each function in tasks[] in sequence for each item in array[]
 //  and passes the item to the function
 //  - tasks (function[]): the list of functions to call for each item in array[]
-//  - array (object[]): the list of items to call the functions for
-//  - emitback (EventEmitter): an EventEmitter to receive the events:
+//  - items (object[]): the list of items to call the functions for
+//  - emitter (EventEmitter): an EventEmitter to receive the events:
 //          - 'item starting'
 //          - 'task starting'
 //          - 'task finished'
