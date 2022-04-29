@@ -20,40 +20,40 @@ const devices = [
     // },
 ];
 
-function task1(device, callback) {
+function task1(device, next) {
     setTimeout(() => {
         console.log(device.name, device.ip, "Task 1: Step 1 complete");
         setTimeout(() => {
             console.log(device.name, device.ip, "Task 1: Step 2 complete");
             setTimeout(() => {
                 console.log(device.name, device.ip, "Task 1: Step 3 complete");
-                callback('task 1 complete');
+                next('task 1 complete');
             }, 1000);
         }, 1000);
     }, 1000);
 }
 
-function task2(device, callback) {
+function task2(device, next) {
     setTimeout(() => {
         console.log(device.name, device.ip, "Task 2: Step 1 complete");
         setTimeout(() => {
             console.log(device.name, device.ip, "Task 2: Step 2 complete");
             setTimeout(() => {
                 console.log(device.name, device.ip, "Task 2: Step 3 complete");
-                callback('task 2 complete');
+                next('task 2 complete');
             }, 1000);
         }, 1000);
     }, 1000);
 }
 
-function task3(device, callback) {
+function task3(device, next) {
     setTimeout(() => {
         console.log(device.name, device.ip, "Task 3: Step 1 complete");
         setTimeout(() => {
             console.log(device.name, device.ip, "Task 3: Step 2 complete");
             setTimeout(() => {
                 console.log(device.name, device.ip, "Task 3: Step 3 complete");
-                callback('task 3 complete');
+                next('task 3 complete');
             }, 1000);
         }, 1000);
     }, 1000);

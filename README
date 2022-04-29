@@ -14,13 +14,13 @@ const {EventEmitter} = require("events");
 
 const items = ["Elephant", "Donkey", "Moose"];
 
-function task1(item, callback) {
-    callback("result 1");
-    // pass an Error object to callback() to cause the string of tasks for the one item to quit
+function task1(item, next) {
+    next("result 1");
+    // pass an Error object to next() to cause the string of tasks to cancel
 }
 
-function task2(item, callback) {
-    callback("result 2");
+function task2(item, next) {
+    next("result 2");
 }
 
 var emitter = new EventEmitter();
